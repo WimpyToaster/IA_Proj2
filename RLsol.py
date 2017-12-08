@@ -1,3 +1,11 @@
+"""
+Grupo 029
+
+Antonio Terra 84702
+Diogo D'Andrade 84709
+
+"""
+
 
 import numpy as np
 
