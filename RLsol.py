@@ -9,17 +9,17 @@ Diogo D'Andrade 84709
 
 import numpy as np
 
-def Q2pol(Q, epsilon = 0.1):
+def Q2pol(Q, epsilon = 0.9):
 	B = [[sum(y), sum(y)] for y in Q]
 	MAX = [max(x) for x in Q]
 	
 	for i in range(len(Q)):
 		temp = np.random.random_sample()
 		if (temp < epsilon):
+			Q[i] = [0 if Q[i][x] != MAX[i] else 1 for x in range(len(Q[i]))]
+		else:			
 			for j in range( len(Q[0]) ):
 				Q[i][j] = Q[i][j] / B[i][j]
-		else:
-			Q[i] = [0 if Q[i][x] != MAX[i] else 1 for x in range(len(Q[i]))]
 
 	return Q
 	
