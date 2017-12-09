@@ -1,11 +1,8 @@
 """
 Grupo 029
-
 Antonio Terra 84702
 Diogo D'Andrade 84709
-
 """
-
 import numpy as np
 from sklearn import datasets, tree, linear_model, neighbors, gaussian_process
 from sklearn.gaussian_process.kernels import *
